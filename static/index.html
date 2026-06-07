@@ -1,0 +1,135 @@
+<!-- Project: Sudoku Solver
+Developer: Imtiaz Adar
+Contact: www.linkedin.com/in/imtiaz-ahmed-adar -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Sudoku - Number Puzzle Game</title>
+    <!-- Sudoku - PNG image -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/sudoku.png">
+    <link rel="shortcut icon" href="/static/soduku.png">
+    
+    <!-- For better compatibility, multiple sizes -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/sudoku.png">
+    <link rel="apple-touch-icon" href="/static/sudoku.png">
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <div class="main-content">
+            <!-- Navigation -->
+            <nav class="nav">
+                <div class="nav-brand">
+                    <h1>SUDOKU SOLVER - IMTIAZ ADAR</h1>
+                    <p>Number Puzzle Game</p>
+                </div>
+                <div class="nav-buttons">
+                    <button class="nav-btn" onclick="showHome()">Home</button>
+                    <button class="nav-btn" onclick="showGame()">Play Game</button>
+                    <button class="nav-btn" onclick="showSolver()">Solver</button>
+                </div>
+            </nav>
+
+            <!-- Home Page -->
+            <div id="homePage" class="page active">
+                <div class="hero-section">
+                    <div class="hero-content">
+                        <h2>Challenge Your Mind</h2>
+                        <p>Classic Sudoku puzzle game with smart solver</p>
+                    </div>
+                </div>
+                <div class="difficulty-section">
+                    <h3>Select Difficulty</h3>
+                    <div class="difficulty-buttons">
+                        <button class="difficulty-btn easy" onclick="startGame('easy')">Easy</button>
+                        <button class="difficulty-btn medium" onclick="startGame('medium')">Medium</button>
+                        <button class="difficulty-btn hard" onclick="startGame('hard')">Hard</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Page -->
+            <div id="gamePage" class="page">
+                <div class="game-header">
+                    <div class="stats">
+                        <div class="stat-card">
+                            <span class="stat-label">Mistakes</span>
+                            <span class="stat-value" id="mistakeCount">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">Hints Used</span>
+                            <span class="stat-value" id="hintCount">0</span>
+                        </div>
+                    </div>
+                    <button class="new-game-btn" onclick="resetGame()">New Game</button>
+                </div>
+                
+                <!-- Layout: board and number pad side by side on desktop -->
+                <div class="game-layout">
+                    <div class="sudoku-container">
+                        <div class="sudoku-board" id="sudokuBoard"></div>
+                    </div>
+                    <div class="number-pad-section">
+                        <div class="number-pad" id="numberPad"></div>
+                        <div class="action-buttons">
+                            <button class="action-btn erase" onclick="eraseNumber()">Erase</button>
+                            <button class="action-btn hint" onclick="useHint()">Hint</button>
+                            <button class="action-btn solve" onclick="solveGame()">Solve</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solver Page -->
+            <div id="solverPage" class="page">
+                <h3 class="solver-title">Sudoku Solver</h3>
+                <p class="solver-subtitle">Enter any puzzle and get the solution instantly</p>
+                <div class="game-layout">
+                    <div class="sudoku-container">
+                        <div class="sudoku-board" id="solverBoard"></div>
+                    </div>
+                    <div class="number-pad-section">
+                        <div class="number-pad" id="solverNumberPad"></div>
+                        <div class="action-buttons">
+                            <button class="action-btn erase" onclick="solverErase()">Erase</button>
+                            <button class="action-btn clear" onclick="solverClear()">Clear</button>
+                            <button class="action-btn solve" onclick="solveSudoku()">Solve</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer - Professional Design -->
+        <footer class="footer">
+            <div class="developer-info">
+                <span class="developer-label">Developed by</span>
+                <span class="developer-name">Imtiaz Adar</span>
+            </div>
+            <div class="social-links">
+                <a href="https://x.com/imtiazaadar" target="_blank" class="social-link x-link">X (Twitter)</a>
+                <a href="https://linkedin.com/in/imtiaz-ahmed-adar" target="_blank" class="social-link linkedin-link">LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="moveSound" preload="auto">
+        <source src="/static/sounds/dra2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="winSound" preload="auto">
+        <source src="/static/sounds/dra4.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="loseSound" preload="auto">
+        <source src="/static/sounds/dra3.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="loseSound1" preload="auto">
+        <source src="/static/sounds/dra5.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
