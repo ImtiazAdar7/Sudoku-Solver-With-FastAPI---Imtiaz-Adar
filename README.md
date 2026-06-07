@@ -165,7 +165,7 @@ sudoku-game/
 
 
 # 👨‍💻 Developer
-**Imtiaz Adar [LinkedIn](www.linkedin.com/in/imtiaz-ahmed-adar)**
+**Imtiaz Adar [LinkedIn](https://www.linkedin.com/in/imtiaz-ahmed-adar)**
 
 **X (Twitter): @imtiazaadar**
 
