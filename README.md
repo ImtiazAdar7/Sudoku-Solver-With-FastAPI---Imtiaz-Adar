@@ -2,7 +2,7 @@
 
 A beautiful, responsive Sudoku game with a built-in solver, sound effects, and three difficulty levels. Built with FastAPI backend and JavaScript frontend.
 
-![Sudoku Game Screenshot](pp.png)
+![Sudoku Game Screenshot](static/pp.png)
 
 # ✨ Features
 
