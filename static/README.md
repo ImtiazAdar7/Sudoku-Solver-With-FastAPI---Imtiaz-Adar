@@ -2,7 +2,7 @@
 
 A beautiful, responsive Sudoku game with a built-in solver, sound effects, and three difficulty levels. Built with FastAPI backend and JavaScript frontend.
 
-![Sudoku Game Screenshot](https://via.placeholder.com/800x400?text=Sudoku+Game+Screenshot)
+![Sudoku Game Screenshot](pp.png)
 
 # ✨ Features
 
@@ -50,13 +50,13 @@ pip install fastapi uvicorn
 3. Add sound files
 Place your sound files in the static/sounds/ directory:
 
-dra1.mp3 - Played when placing a number
+- dra1.mp3 - Played when placing a number
 
-dra3.mp3 - Played when making a mistake
+- dra3.mp3 - Played when making a mistake
 
-dra4.mp3 - Played when winning/solving
+- dra4.mp3 - Played when winning/solving
 
-dra45.mp3 - Played when about to lose
+- dra5.mp3 - Played when about to lose
 
 4. Run the application
 ```
@@ -93,10 +93,11 @@ Navigate to http://localhost:8000
 - Use Clear to reset the board
 
 # 🎯 Difficulty Levels
-Difficulty	Empty Cells	Cells Pre-filled  
-Easy	40	41  
-Medium	55	26  
-Hard	65	16  
+|Difficulty|Empty Cells|Cells Pre-filled|
+|----------|-----------|----------------|
+|Easy|40|41|
+|Medium|55|26|  
+|Hard|65|16|  
 
 # 📱 Responsive Design
 The game adapts to different screen sizes:
@@ -108,11 +109,13 @@ The game adapts to different screen sizes:
 - Desktop (>1024px) - Number pad beside the board with larger buttons
 
 # 🛠️ API Endpoints
-Endpoint	Method	Description  
-/api/new-puzzle/{difficulty}	GET	Generate a new random Sudoku puzzle  
-/api/solve	POST	Solve a Sudoku puzzle  
-/api/validate	POST	Validate a move and return conflicts  
-Example API Response
+|Endpoint|Method|Description|
+|--------|------|-----------|  
+|/api/new-puzzle/{difficulty}|GET|Generate a new random Sudoku puzzle| 
+|/api/solve|POST|Solve a Sudoku puzzle|  
+|/api/validate|POST|Validate a move and return conflicts|  
+
+**Example API Response**
 GET /api/new-puzzle/easy  
 ```
 json
@@ -142,10 +145,10 @@ body {
 - Change Sound Effects
 Replace the MP3 files in static/sounds/ with your own:
 
-Keep the same filenames or update them in script.js
+- Keep the same filenames or update them in script.js
 
 # 📂 Project Structure
-text
+```
 sudoku-game/  
 ├── main.py                 # FastAPI backend with Sudoku logic  
 ├── static/  
@@ -156,19 +159,20 @@ sudoku-game/
 │       ├── dra1.mp3  
 │       ├── dra3.mp3  
 │       └── dra4.mp3  
+|       └── dra4.mp3   
 └── README.md              # This file  
-
+```
 
 
 # 👨‍💻 Developer
-**Imtiaz Adar** [LinkedIn](www.linkedin.com/in/imtiaz-ahmed-adar)
+**Imtiaz Adar [LinkedIn](www.linkedin.com/in/imtiaz-ahmed-adar)**
 
-X (Twitter): @imtiazaadar
+**X (Twitter): @imtiazaadar**
 
 
 # 🙏 Acknowledgments
-FastAPI framework
+- FastAPI framework
 
-FontAwesome for icons
+- FontAwesome for icons
 
-Google Fonts for Inter font
+- Google Fonts for Inter font
